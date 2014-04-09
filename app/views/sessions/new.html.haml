@@ -1,0 +1,15 @@
+.col-sm-12
+  = form_tag sessions_path  do
+    .form-group
+      = label_tag :email, 'Email:'
+      .col-sm-4
+        = text_field_tag :email
+    .form-group
+      = label_tag :password, 'Password:'
+      .col-sm-4
+        = password_field_tag :password
+    .form-group
+      .col-sm-offset-1.col-sm-4
+        = submit_tag 'Log In'
+
+-# TODO FIX STYLES ON LOG IN FORM

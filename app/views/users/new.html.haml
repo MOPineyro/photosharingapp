@@ -1,0 +1,25 @@
+.col-sm-12
+  = form_for @user, html: {class: "form-horizontal"}  do |f|
+    .form-group
+      = f.label 'Name:', class: 'col-sm-1 control-label'
+      .col-sm-4
+        = f.text_field :name, placeholder: 'Full Name', class: 'form-control'
+
+    .form-group
+      = f.label 'Email Address:', class: 'col-sm-1 control-label'
+      .col-sm-4
+        = f.text_field :email, placeholder: 'user@example.com', class: 'form-control'
+
+    .form-group
+      = f.label 'Password:', class: 'col-sm-1 control-label'
+      .col-sm-4
+        = f.password_field :password, class: 'form-control'
+
+    .form-group
+      = f.label 'Confirm Password:', class: 'col-sm-1 control-label'
+      .col-sm-4
+        = f.password_field :password_confirmation, class: 'form-control'
+
+    .form-group
+      .col-sm-offset-1.col-sm-4
+        = f.submit :Submit, class: 'btn btn-primary'
